@@ -1,0 +1,73 @@
+main {
+  background-color: #4366a8;
+  padding: 5%;
+}
+main form {
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 5%;
+  margin: 0 10%;
+}
+main form > * {
+  margin: 2% 0;
+}
+main form .allergene {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main form .allergene p {
+  margin: 0;
+}
+main form .listeingredients {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main form .listeingredients .possede {
+  flex: 1 1;
+  padding: 2%;
+}
+main form .listeingredients .possede h2 {
+  text-align: center;
+}
+main form .listeingredients .possede .ingredient p {
+  color: white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 5%;
+  padding: 5%;
+  background-color: #f57e69;
+  cursor: pointer;
+  text-align: center;
+}
+main form .listeingredients .possede .ingredient p:hover {
+  background-color: #f25539;
+}
+main form .listeingredients .possede .ingredient .hidden {
+  display: none;
+}
+main form .listeingredients .nonpossede {
+  padding: 2%;
+  flex: 1 1;
+}
+main form .listeingredients .nonpossede h2 {
+  text-align: center;
+}
+main form .listeingredients .nonpossede .ingredient {
+  color: white;
+  border-radius: 15px;
+  background-color: white;
+  margin: 5%;
+  padding: 5%;
+  cursor: pointer;
+  background-color: #4366a8;
+  text-align: center;
+}
+main form .listeingredients .nonpossede .ingredient:hover {
+  background-color: #345084;
+}/*# sourceMappingURL=update.css.map */

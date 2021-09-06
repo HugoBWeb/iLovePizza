@@ -1,0 +1,216 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    header {
+        padding: 0;
+        background: rgb(67,102,168);
+        background: linear-gradient(0deg, rgba(67,102,168,1) 12%, rgba(81,137,245,1) 58%);
+        color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        h1>a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding-top: 2%;
+            font-size: 3rem;
+            @media screen and (min-width:768px) {
+                padding-top: 2%;
+            }
+            @media screen and (min-width:1024px) {
+                padding-top: 2%;
+            }
+        }
+        svg {
+            display: block;
+        }
+    }
+    main {
+        background-color: rgb(67,102,168);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        .separator {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            svg {
+                margin: 0;
+                padding: 0;
+                transform: translateY(-1px);
+                &:first-child {
+                    transform: translateY(1px) rotateZ(180deg);
+                }
+            }
+        }
+        section {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            h1 {
+                text-align: center;
+                color: white;
+                width: 100%;
+                padding: 2% 0;
+            }
+            @media screen and (min-width:768px) {
+                flex-flow: row wrap;
+            }
+            .item {
+                background-color: white;
+                padding: 1% 2%;
+                margin: 2%;
+                border-radius: 5px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+                @media screen and (min-width:768px) {
+                    width: 40%;
+                }
+                @media screen and (min-width:1440px) {
+                    width: 28%;
+                    padding: 1%;
+                    margin: 1%;
+                }
+                .rate {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                div.update {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: space-around;
+                    * {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        color: white;
+                        border-radius: 15px;
+                        margin: 5%;
+                        &.del {
+                            background-color: #f57e69;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: darken($color: #f57e69, $amount: 10%);
+                            }
+                        }
+                        &.up {
+                            margin: 0;
+                            padding: 0;
+                            text-decoration: none;
+                            background-color: rgb(67,102,168);
+                            &:hover {
+                                background-color: darken($color: rgb(67,102,168), $amount: 10%);
+                            }
+                        }
+                    }
+                }  
+            }
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                /* Modal Content/Box */
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 15% auto; /* 15% from the top and centered */
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Could be more or less, depending on screen size */
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    h2 {
+                        text-align: center;
+                    }
+                    div {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-around;
+                        * {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            text-decoration: none;
+                            color: white;
+                            border-radius: 15px;
+                            width: 50px;
+                            height: 50px;
+                        }
+                        .oui {
+                            margin: 0;
+                            padding: 0;
+                            text-decoration: none;
+                            color: white;
+                            background-color: rgb(67,102,168);
+                            &:hover {
+                                background-color: darken($color: rgb(67,102,168), $amount: 10%);
+                            }
+                        }
+                        .close {
+                            background-color: #f57e69;
+                            color: white;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: darken($color: #f57e69, $amount: 10%);
+                            }
+                        }
+                    }
+                }
+            }
+            div.add {
+                width: 100%;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    margin-bottom: 2%;
+                    padding: 0;
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50%;
+                    color: white;
+                    text-decoration: none;
+                    background-color: #f57e69;
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 2rem;
+                    &:hover {
+                        background-color: darken($color: #f57e69, $amount: 10%);
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background: rgb(67,102,168);
+        background: linear-gradient(180deg, rgba(67,102,168,1) 12%, rgba(81,137,245,1) 58%);
+        svg {
+            transform: rotateZ(180deg);
+        }
+    }
+}
+

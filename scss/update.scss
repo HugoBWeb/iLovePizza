@@ -1,0 +1,74 @@
+main {
+    background-color: rgb(67,102,168);
+    padding: 5%;
+    form {
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 5%;
+        margin: 0 10%;
+        &>* {
+            margin: 2% 0;
+        }
+        .allergene {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            p {
+                margin: 0;
+            }
+        }
+        .listeingredients {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            .possede {
+                flex: 1 1;
+                padding: 2%;
+                h2 {
+                    text-align: center;
+                }
+                .ingredient {
+                    p {
+                        color: white;
+                        border-radius: 15px;
+                        background-color: white;
+                        margin: 5%;
+                        padding: 5%;background-color: #f57e69;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: darken($color: #f57e69, $amount: 10%);
+                        }
+                        text-align: center;
+                    }
+                    .hidden {
+                        display: none;
+                    }
+                }
+            }
+            .nonpossede {
+                padding: 2%;
+                flex: 1 1;
+                h2 {
+                    text-align: center;
+                }
+                .ingredient {
+                    color: white;
+                    border-radius: 15px;
+                    background-color: white;
+                    margin: 5%;
+                    padding: 5%;
+                    cursor: pointer;
+                    background-color: rgb(67,102,168);
+                    &:hover {
+                        background-color: darken($color: rgb(67,102,168), $amount: 10%);
+                    }
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

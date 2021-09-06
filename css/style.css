@@ -1,0 +1,235 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.wrapper header {
+  padding: 0;
+  background: #4366a8;
+  background: linear-gradient(0deg, #4366a8 12%, #5189f5 58%);
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.wrapper header h1 > a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding-top: 2%;
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .wrapper header h1 > a {
+    padding-top: 2%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header h1 > a {
+    padding-top: 2%;
+  }
+}
+.wrapper header svg {
+  display: block;
+}
+.wrapper main {
+  background-color: #4366a8;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.wrapper main .separator {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.wrapper main .separator svg {
+  margin: 0;
+  padding: 0;
+  transform: translateY(-1px);
+}
+.wrapper main .separator svg:first-child {
+  transform: translateY(1px) rotateZ(180deg);
+}
+.wrapper main section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  /* The Modal (background) */
+}
+.wrapper main section h1 {
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 2% 0;
+}
+@media screen and (min-width: 768px) {
+  .wrapper main section {
+    flex-flow: row wrap;
+  }
+}
+.wrapper main section .item {
+  background-color: white;
+  padding: 1% 2%;
+  margin: 2%;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .wrapper main section .item {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .wrapper main section .item {
+    width: 28%;
+    padding: 1%;
+    margin: 1%;
+  }
+}
+.wrapper main section .item .rate {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper main section .item div.update {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper main section .item div.update * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  margin: 5%;
+}
+.wrapper main section .item div.update *.del {
+  background-color: #f57e69;
+  cursor: pointer;
+}
+.wrapper main section .item div.update *.del:hover {
+  background-color: #f25539;
+}
+.wrapper main section .item div.update *.up {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: #4366a8;
+}
+.wrapper main section .item div.update *.up:hover {
+  background-color: #345084;
+}
+.wrapper main section .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  /* Modal Content/Box */
+}
+.wrapper main section .modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.wrapper main section .modal .modal-content h2 {
+  text-align: center;
+}
+.wrapper main section .modal .modal-content div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.wrapper main section .modal .modal-content div * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+}
+.wrapper main section .modal .modal-content div .oui {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  background-color: #4366a8;
+}
+.wrapper main section .modal .modal-content div .oui:hover {
+  background-color: #345084;
+}
+.wrapper main section .modal .modal-content div .close {
+  background-color: #f57e69;
+  color: white;
+  cursor: pointer;
+}
+.wrapper main section .modal .modal-content div .close:hover {
+  background-color: #f25539;
+}
+.wrapper main section div.add {
+  width: 100%;
+}
+.wrapper main section div.add a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  padding: 0;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  background-color: #f57e69;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+}
+.wrapper main section div.add a:hover {
+  background-color: #f25539;
+}
+.wrapper footer {
+  background: #4366a8;
+  background: linear-gradient(180deg, #4366a8 12%, #5189f5 58%);
+}
+.wrapper footer svg {
+  transform: rotateZ(180deg);
+}/*# sourceMappingURL=style.css.map */
